@@ -57,12 +57,10 @@ function App() {
             value={formik.values.Email}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-          >
-            
-          </input>{" "}
-            {formik.touched.Email && formik.errors.Email ? (
-              <span style={{ color: "red" }}>{formik.errors.Email}</span>
-            ) : null}
+          ></input>{" "}
+          {formik.touched.Email && formik.errors.Email ? (
+            <span style={{ color: "red" }}>{formik.errors.Email}</span>
+          ) : null}
           <br />
           <input type="Number" placeholder="Phone Number" required></input>
           <br />
@@ -72,7 +70,12 @@ function App() {
           <br />
           <input type="state" placeholder="State" required></input>
           <br />
-          <input type="message" className="message" placeholder="Message"   required></input>
+          <input
+            type="message"
+            className="message"
+            placeholder="Message"
+            required
+          ></input><br />
           <button type="submit">Submit</button>
         </form>
       </div>
